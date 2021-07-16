@@ -7,20 +7,16 @@ document.addEventListener("DOMContentLoaded", () => {
     let task = document.createElement("li")
     task.textContent = taskName.value + ' '
 
-    let button = document.createElement("button")
-    button.textContent = 'x'
-    task.appendChild(button)
-
     return task
   }
 
   function addToDo(){
-    event.preventDefault()
+    preventDefault()
 
     task = buildListItem() 
     list.appendChild(task)
 
-    event.target.reset()
+    target.reset()
   }
 
   form.addEventListener("submit", addToDo)
